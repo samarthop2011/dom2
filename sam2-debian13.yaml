@@ -1,0 +1,14 @@
+
+features:
+  - "dnf ttyd"
+
+nginx:
+  passenger:
+    enabled: "on"
+    app_start_command: "env PATH=$HOME/usr/bin:$PATH LD_LIBRARY_PATH=$HOME/usr/lib:$LD_LIBRARY_PATH ttyd -W -p $PORT bash"
+
+commands:
+  - 'command -v bash'
+  - 'command -v curl'
+  - 'echo "SAM terminal template installed."'
+  - 'echo "Run the Linux setup command from the browser terminal."'
